@@ -19,13 +19,10 @@ function getCurrentAdmin() {
             <td>${rolesStringAdmin}</td>
             </tr>`;
             tableUserAdmin.innerHTML = data;
-            navbarBrandAdmin.innerHTML = `
-                             <span>with roles:</span>
-                            `;
-
-            navbarBrandAdmin.innerHTML = `<b><span>${user.username}</span></b>
-                             <span>with roles:</span>
-                             <span>${rolesStringAdmin}</span>`;
+            let navbar = `<b> <span>${user.username}</span></b>
+                            <span>with roles:</span>
+                            <span>${rolesStringAdmin}</span>`;
+            document.getElementById("navbarBrandAdmin").innerHTML;
         });
 }
 

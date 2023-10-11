@@ -1,5 +1,5 @@
 const URLNavbarAdmin = 'http://localhost:8080/api/admin/show/';
-const navbarBrandAdmin = document.getElementById('navbarBrandAdmin');
+const navbarBrandAdmin = document.getElementById('navbarBrandAdmin');//Элемент, где будет роль и почта текущего юзера
 const tableUserAdmin = document.getElementById('tableAdmin');
 
 function getCurrentAdmin() {
@@ -19,10 +19,10 @@ function getCurrentAdmin() {
             <td>${rolesStringAdmin}</td>
             </tr>`;
             tableUserAdmin.innerHTML = data;
-            let navbar = `<b> <span>${user.username}</span></b>
-                            <span>with roles:</span>
-                            <span>${rolesStringAdmin}</span>`;
-            document.getElementById("navbarBrandAdmin").innerHTML;
+
+            navbarBrandAdmin.innerHTML = `<b><span>${user.username}</span></b>
+                             <span>with roles:</span>
+                             <span>${rolesStringAdmin}</span>`;
         });
 }
 
